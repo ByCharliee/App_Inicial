@@ -1,10 +1,15 @@
 package model
 
-class Rectangulo(var color: Int, var ancho: Int, var alto: Int, var x: Float, var y: Float) {
+open class Rectangulo(var color: Int, var ancho: Int, var alto: Int, x1: Float, y1: Float) {
     //Coordenadas iniciales
 
-    //var x: Float
-    //var y: Float
+
+    var x = x1
+    var y = y1
+
+
+
+
 
     //Comportamientos
 
