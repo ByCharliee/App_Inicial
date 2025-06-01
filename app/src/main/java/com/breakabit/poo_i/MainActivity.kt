@@ -85,7 +85,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnCambiarColorBorde.setOnClickListener {
-                rectangulo.cambiarBorde(generarColor())
+                //rectangulo.cambiarBorde(generarColor())
+
+                rectangulo.cambiarBorde(RectanguloConBorde.ManejoColor.mostrarColor())
                 actualizarVista(rectanguloView, rectangulo)
 
             }
