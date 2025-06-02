@@ -2,7 +2,7 @@ package model
 
 import android.graphics.Color
 
-class RectanguloConBorde(color: Int, ancho: Int, alto: Int,x1: Float, y1: Float, var bordeColor: Int): Rectangulo(color, ancho, alto,x1, y1) {
+class RectanguloConBorde(color: Int, ancho: Int, alto: Int,x1: Int, y1: Int, var bordeColor: Int): Rectangulo(color, ancho, alto,x1, y1) {
 
     class ManejoColor{
         companion object{

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         rectanguloView.post {
 
-            val rectangulo = RectanguloConBorde(ContextCompat.getColor(this, R.color.red), rectanguloView.layoutParams.width, rectanguloView.layoutParams.height, rectanguloView.x, rectanguloView.y, ContextCompat.getColor(this, R.color.black))
+            val rectangulo = RectanguloConBorde(ContextCompat.getColor(this, R.color.red), rectanguloView.layoutParams.width, rectanguloView.layoutParams.height, rectanguloView.x.toInt(), rectanguloView.y.toInt(), ContextCompat.getColor(this, R.color.black))
 
 
             val btnArriba:Button = findViewById(R.id.btnArriba)
@@ -115,15 +115,21 @@ class MainActivity : AppCompatActivity() {
         drawable.setColor(rectangulo.color)
         drawable.setStroke(10, rectangulo.bordeColor)
 
-        rectanguloView.layoutParams.height = rectangulo.alto
-        rectanguloView.layoutParams.width = rectangulo.ancho
+        //rectanguloView.layoutParams.height = rectangulo.alto
+        //rectanguloView.layoutParams.width = rectangulo.ancho
+        rectanguloView.layoutParams.height = rectangulo.dimensiones.alto
+        rectanguloView.layoutParams.width = rectangulo.dimensiones.ancho
+
 
         //rectanguloView.setBackgroundColor(rectangulo.color)
 
         rectanguloView.background = drawable
 
-        rectanguloView.x=rectangulo.x.toFloat()
-        rectanguloView.y=rectangulo.y.toFloat()
+        //rectanguloView.x=rectangulo.x.toFloat()
+        //rectanguloView.y=rectangulo.y.toFloat()
+
+        rectanguloView.x=rectangulo.dimensiones.x.toFloat()
+        rectanguloView.y=rectangulo.dimensiones.y.toFloat()
 
         rectanguloView.requestLayout()
 
